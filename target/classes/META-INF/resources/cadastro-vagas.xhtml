@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Cadastro de Vagas</title>
+</h:head>
+<h:body>
+    <h:form id="formVagas">
+        <p:panel header="Cadastro de Vagas">
+            <h:outputLabel for="inicio" value="Data Início: " />
+            <p:calendar id="inicio" value="#{vagaBean.inicio}" showTime="true" />
+            
+            <h:outputLabel for="fim" value="Data Fim: " />
+            <p:calendar id="fim" value="#{vagaBean.fim}" showTime="true" />
+            
+            <h:outputLabel for="quantidade" value="Quantidade: " />
+            <p:inputNumber id="quantidade" value="#{vagaBean.quantidade}" />
+            
+            <p:commandButton value="Salvar" action="#{vagaBean.salvar}" update="@form" />
+        </p:panel>
+    </h:form>
+</h:body>
+</html>
